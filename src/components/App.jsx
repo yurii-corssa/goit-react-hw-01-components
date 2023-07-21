@@ -1,16 +1,22 @@
+import { ProfileCard } from './ProfileCard/';
+import { StatisicsCard } from './StatisticsCard';
+import { FriendList } from './FriendList';
+import userData from '../user.json';
+
+const { username, tag, location, avatar, stats } = userData;
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <ProfileCard
+        username={username}
+        tag={tag}
+        location={location}
+        avatar={avatar}
+        stats={stats}
+      />
+      <StatisicsCard />
+      <FriendList />
+    </>
   );
 };
