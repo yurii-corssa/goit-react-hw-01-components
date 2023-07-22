@@ -1,22 +1,17 @@
-import { ProfileCard } from './ProfileCard/';
-import { StatisicsCard } from './StatisticsCard';
-import { FriendList } from './FriendList';
-import userData from '../user.json';
+import { ProfileCard } from './ProfileCard/ProfileCard';
+import { StatisicsCard } from './StatisticsCard/StatisticsCard';
+import { FriendList } from './FriendList/FriendList';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 
-const { username, tag, location, avatar, stats } = userData;
+import userData from './ProfileCard/user.json';
 
 export const App = () => {
   return (
     <>
-      <ProfileCard
-        username={username}
-        tag={tag}
-        location={location}
-        avatar={avatar}
-        stats={stats}
-      />
+      <ProfileCard data={userData} />
       <StatisicsCard />
       <FriendList />
+      <TransactionHistory />
     </>
   );
 };
