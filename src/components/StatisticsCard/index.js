@@ -1,1 +1,0 @@
-export { StatisicsCard } from './StatisticsCard';

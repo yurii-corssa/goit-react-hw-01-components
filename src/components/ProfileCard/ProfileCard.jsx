@@ -1,10 +1,11 @@
-export const ProfileCard = ({
-  username,
-  tag,
-  location,
-  avatar = 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
-  stats,
-}) => {
+export const ProfileCard = ({ data }) => {
+  const {
+    username,
+    tag,
+    location,
+    avatar = 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
+    stats,
+  } = data;
   return (
     <div className="profile">
       <div className="description">
