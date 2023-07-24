@@ -9,7 +9,7 @@ export const Profile = styled.div`
   font-size: 14px;
   font-family: 'Exo 2', sans-serif;
   color: #333;
-  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 `;
 
 export const Description = styled.div`
