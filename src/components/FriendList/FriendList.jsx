@@ -1,17 +1,25 @@
 import friends from './friends.json';
 
+import {
+  List,
+  ListAvatar,
+  ListItem,
+  ListName,
+  ListStatus,
+} from './FriendList.styled';
+
 export const FriendList = () => {
   return (
-    <ul className="friend-list">
+    <List>
       {friends.map(({ avatar, name, isOnline, id }) => {
         return (
-          <li className="item" key={id}>
-            <span className="status"></span>
-            <img className="avatar" src={avatar} alt={name} width="48" />
-            <p className={name}>{name}</p>
-          </li>
+          <ListItem key={id}>
+            <ListStatus data-isonline={isOnline}></ListStatus>
+            <ListAvatar src={avatar} alt={name} width={58} height={58} />
+            <ListName>{name}</ListName>
+          </ListItem>
         );
       })}
-    </ul>
+    </List>
   );
 };
