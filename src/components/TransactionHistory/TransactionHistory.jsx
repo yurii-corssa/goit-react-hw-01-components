@@ -1,19 +1,20 @@
 import { BodyTable } from './BodyTable/BodyTable';
+import { Head, HeadCell, HeadRow, Table } from './TransactionHistory.styled';
 import dataTransactions from './transactions.json';
 
 export const TransactionHistory = () => {
   return (
-    <table className="transaction-history">
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
-      </thead>
+    <Table>
+      <Head>
+        <HeadRow>
+          <HeadCell>Type</HeadCell>
+          <HeadCell>Amount</HeadCell>
+          <HeadCell>Currency</HeadCell>
+        </HeadRow>
+      </Head>
       <tbody>
         <BodyTable data={dataTransactions} />
       </tbody>
-    </table>
+    </Table>
   );
 };
