@@ -1,13 +1,15 @@
 import { StatisticsList } from './StatisticsList/StatisticsList';
 import statisticsData from './data.json';
 
+import { List, Section, Title } from './StatisticsCard.styled';
+
 export const StatisicsCard = () => {
   return (
-    <section className="statistics">
-      <h2 className="title">Upload stats</h2>
-      <ul className="stat-list">
+    <Section>
+      <Title>Upload stats</Title>
+      <List>
         <StatisticsList data={statisticsData} />
-      </ul>
-    </section>
+      </List>
+    </Section>
   );
 };
