@@ -1,15 +1,21 @@
 import { StatisticsList } from './StatisticsList/StatisticsList';
-import statisticsData from './data.json';
+import PropTypes from 'prop-types';
+import { Section, Title } from './StatisticsCard.styled';
 
-import { List, Section, Title } from './StatisticsCard.styled';
-
-export const StatisicsCard = () => {
+export const StatisicsCard = ({ title, data }) => {
   return (
     <Section>
-      <Title>Upload stats</Title>
-      <List>
-        <StatisticsList data={statisticsData} />
-      </List>
+      {title && <Title>{title}</Title>}
+      <StatisticsList data={data} />
     </Section>
   );
+};
+
+StatisicsCard.propTypes = {
+  title: PropTypes.string,
+  name: PropTypes.shape({
+    id: PropTypes.string,
+    label: PropTypes.string,
+    percentage: PropTypes.number,
+  }),
 };

@@ -1,8 +1,8 @@
 import { BodyTable } from './BodyTable/BodyTable';
+import PropTypes from 'prop-types';
 import { Head, HeadCell, HeadRow, Table } from './TransactionHistory.styled';
-import dataTransactions from './transactions.json';
 
-export const TransactionHistory = () => {
+export const TransactionHistory = ({ data }) => {
   return (
     <Table>
       <Head>
@@ -12,9 +12,11 @@ export const TransactionHistory = () => {
           <HeadCell>Currency</HeadCell>
         </HeadRow>
       </Head>
-      <tbody>
-        <BodyTable data={dataTransactions} />
-      </tbody>
+      <BodyTable data={data} />
     </Table>
   );
+};
+
+TransactionHistory.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
 };

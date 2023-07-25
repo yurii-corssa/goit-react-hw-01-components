@@ -1,5 +1,13 @@
 import { styled } from 'styled-components';
 
+export const List = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  list-style: none;
+  padding: 0;
+`;
+
 export const ListItem = styled.li`
   box-sizing: border-box;
   width: calc(100% / 3);
