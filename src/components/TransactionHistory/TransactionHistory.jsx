@@ -18,5 +18,6 @@ export const TransactionHistory = ({ data }) => {
 };
 
 TransactionHistory.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+  data: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string).isRequired)
+    .isRequired,
 };

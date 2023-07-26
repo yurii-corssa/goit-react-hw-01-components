@@ -13,9 +13,11 @@ export const StatisicsCard = ({ title, data }) => {
 
 StatisicsCard.propTypes = {
   title: PropTypes.string,
-  name: PropTypes.shape({
-    id: PropTypes.string,
-    label: PropTypes.string,
-    percentage: PropTypes.number,
-  }),
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    }).isRequired
+  ).isRequired,
 };
